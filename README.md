@@ -1,16 +1,119 @@
-# flutter_cycle_2_task
+# Flutter Cycle 2 Task
 
-A new Flutter project.
+<h1 align="center" style="font-weight: bold;">Flutter Cycle 2 Task</h1>
 
-## Getting Started
+<p align="center">A professional Flutter application for managing and displaying products with dynamic category filtering. Built using modern architecture and robust state management.</p>
 
-This project is a starting point for a Flutter application.
+<p align="center">
+<a href="https://github.com/yourusername/flutter_cycle_2_task">📱 Visit this Project</a>
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 💻 Technologies
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Flutter**: Cross-platform framework.
+- **Dart**: Programming language.
+- **Dio**: HTTP client for API requests.
+- **Provider**: State management.
+
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+1. **Flutter SDK** (version 3.13.0 or later):
+   - Download from [Flutter's official website](https://flutter.dev).
+   - Add Flutter to your PATH:
+     ```bash
+     export PATH="$PATH:[PATH_TO_FLUTTER]/flutter/bin"
+     ```
+   - Verify installation:
+     ```bash
+     flutter --version
+     ```
+
+2. **IDE**:
+   - **VS Code**: Install Flutter and Dart extensions.
+   - **Android Studio**: Install Flutter and Dart plugins.
+
+---
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/flutter_cycle_2_task.git
+2. Navigate to the project:
+     cd flutter_cycle_2_task
+3. Install dependencies:
+     flutter pub get
+4. Run the app:
+     flutter run
+
+🏗 Project Structure:
+lib/
+├── core/                  # Core configurations
+│   ├── constants/         # API constants
+│   ├── network/           # HTTP client
+│   └── service_locator/   # Dependency injection
+├── product/               # Product feature
+│   ├── data/              # Data models
+│   ├── presentation/      # UI components
+│   └── domain/            # Business logic
+└── main.dart              # App entry point
+
+
+
+✨ Key Features
+1. Product Grid:
+
+      Responsive two-column layout.
+
+      Displays product image, title, price, and rating.
+
+2. Category Filtering:
+
+      Dynamic tabs for each category.
+
+      Includes an "All" tab for all products.
+
+3. API Integration:
+
+      Fetches data from FakeStore API.
+
+      Handles network errors gracefully.
+
+4. State Management:
+
+      Uses Provider for efficient state updates.
+
+5. Error Handling:
+
+      Displays loading indicators and error messages.
+
+
+
+📚 Documentation
+• Flutter Docs
+
+• Dart Docs
+
+• Provider Docs
+
+• Dio Docs
+
+
+
+🛠 Support
+• For issues or questions:
+
+• Email: marwan.hakil79@gmail.com
+
+• GitHub Issues: Open an Issue
+
+
+📜 License
+This project is licensed under the MIT License.
