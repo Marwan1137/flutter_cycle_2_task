@@ -5,17 +5,18 @@
 <p align="center">A professional Flutter application for managing and displaying products with dynamic category filtering. Built using modern architecture and robust state management.</p>
 
 <p align="center">
-<a href="https://github.com/yourusername/flutter_cycle_2_task">📱 Visit this Project</a>
 </p>
 
 ---
 
 ## 💻 Technologies
+```bash
 
 - **Flutter**: Cross-platform framework.
 - **Dart**: Programming language.
 - **Dio**: HTTP client for API requests.
 - **Provider**: State management.
+```
 
 
 ---
@@ -41,19 +42,29 @@
 
 ---
 
+
 ### Installation
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/flutter_cycle_2_task.git
+    ```
 2. Navigate to the project:
+   ```bash
      cd flutter_cycle_2_task
-3. Install dependencies:
+   ```
+4. Install dependencies:
+      ```bash
      flutter pub get
-4. Run the app:
+      ```
+6. Run the app:
+      ```bash
      flutter run
+    ```
+      
 
 🏗 Project Structure:
+```bash
 lib/
 ├── core/                  # Core configurations
 │   ├── constants/         # API constants
@@ -65,38 +76,46 @@ lib/
 │   └── domain/            # Business logic
 └── main.dart              # App entry point
 
+```
+
 
 
 ✨ Key Features
 1. Product Grid:
+   ```bash
+     • Responsive two-column layout.
 
-      Responsive two-column layout.
+     • Displays product image, title, price, and rating.
+   ```
 
-      Displays product image, title, price, and rating.
+3. Category Filtering:
+   ```bash
 
-2. Category Filtering:
+     • Dynamic tabs for each category.
 
-      Dynamic tabs for each category.
+     • Includes an "All" tab for all products.
+   ```
 
-      Includes an "All" tab for all products.
+5. API Integration:
+   ```bash
+     • Fetches data from FakeStore API.
 
-3. API Integration:
+     • Handles network errors gracefully.
+   ```
+7. State Management:
+   ```bash
+     • Uses Provider for efficient state updates.
+   ```
 
-      Fetches data from FakeStore API.
-
-      Handles network errors gracefully.
-
-4. State Management:
-
-      Uses Provider for efficient state updates.
-
-5. Error Handling:
-
-      Displays loading indicators and error messages.
+9. Error Handling:
+    ```
+     • Displays loading indicators and error messages.
+    ```
 
 
 
 📚 Documentation
+ ```bash
 • Flutter Docs
 
 • Dart Docs
@@ -104,16 +123,21 @@ lib/
 • Provider Docs
 
 • Dio Docs
+```
 
 
 
 🛠 Support
+```bash
 • For issues or questions:
 
 • Email: marwan.hakil79@gmail.com
 
 • GitHub Issues: Open an Issue
+```
 
 
 📜 License
+```bash
 This project is licensed under the MIT License.
+```
