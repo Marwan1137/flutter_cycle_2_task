@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cycle_2_task/apptheme.dart';
 import 'package:flutter_cycle_2_task/product/model/product_model/product_model.dart';
 
 /* -------------------------------------------------------------------------- */
-/*               ProductItemWidget to display a single product item            */
+/*               ProductItemWidget to display a single product item           */
 /* -------------------------------------------------------------------------- */
 class ProductItemWidget extends StatelessWidget {
   final ProductModel product; // Product data to display
@@ -16,7 +17,7 @@ class ProductItemWidget extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
         side: BorderSide(
-          color: Color(0xff8E6CEF),
+          color: AppTheme.primaryColor,
           width: 2,
         ),
       ),
@@ -25,14 +26,30 @@ class ProductItemWidget extends StatelessWidget {
           /* -------------------------------------------------------------------------- */
           /*               Display product image                                        */
           /* -------------------------------------------------------------------------- */
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image.network(
-              product.image,
-              height: 180,
-              width: double.infinity,
-              fit: BoxFit.scaleDown,
-            ),
+          Stack(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.network(
+                  product.image,
+                  height: 180,
+                  width: double.infinity,
+                  fit: BoxFit.scaleDown,
+                ),
+              ),
+              Positioned(
+                right: 6,
+                top: 10,
+                child: Container(
+                  decoration: AppTheme.containerDecoration,
+                  child: Icon(
+                    Icons.favorite_outline_outlined,
+                    color: AppTheme.white,
+                    size: 30,
+                  ),
+                ),
+              ),
+            ],
           ),
           /* -------------------------------------------------------------------------- */
           /*               Display product details                                      */
@@ -44,54 +61,47 @@ class ProductItemWidget extends StatelessWidget {
               children: [
                 /* ------------------------ Product title ----------------------------- */
                 Text(
-                  product.title, // Product title
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.black,
-                  ),
+                  product.title,
+                  style: AppTheme.titleTextStyle,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
-                SizedBox(
-                  height: 5,
-                ),
+                SizedBox(height: 5),
                 /* ------------------------ Product description ----------------------- */
                 Text(
                   product.description,
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.black,
-                  ),
+                  style: AppTheme.descriptionTextStyle,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
-                SizedBox(
-                  height: 5,
-                ),
+                SizedBox(height: 5),
                 /* ------------------------ Product price ----------------------------- */
                 Text(
                   'EGP ${product.price}',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: AppTheme.priceTextStyle,
                 ),
-                SizedBox(
-                  height: 5,
-                ),
+                SizedBox(height: 5),
                 /* ------------------------ Product rating ---------------------------- */
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
                       'Review (${product.rating!.rate?.toStringAsFixed(1) ?? "N/A"}) ⭐',
+                      style: AppTheme.reviewTextStyle,
+                    ),
+                    Spacer(),
+                    Container(
+                      decoration: AppTheme.containerDecoration,
+                      child: Icon(
+                        Icons.add,
+                        color: AppTheme.white,
+                      ),
                     ),
                   ],
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

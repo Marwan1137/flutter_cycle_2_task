@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cycle_2_task/apptheme.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_cycle_2_task/product/viewmodel/product_provider.dart';
 import 'package:flutter_cycle_2_task/product/view/widgets/product_item_widget.dart';
@@ -32,15 +33,15 @@ class _ProductListScreenState extends State<ProductListScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppTheme.white,
       appBar: AppBar(
         title: const Center(
           child: Text(
             "Product List",
-            style: TextStyle(fontSize: 30, color: Colors.white),
+            style: TextStyle(fontSize: 30, color: AppTheme.white),
           ),
         ),
-        backgroundColor: const Color(0xff8E6CEF),
+        backgroundColor: AppTheme.primaryColor,
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(50.0),
           child: Consumer<ProductProvider>(
@@ -78,8 +79,8 @@ class _ProductListScreenState extends State<ProductListScreen>
                   : TabBar(
                       controller: _tabController,
                       isScrollable: true,
-                      labelColor: Colors.black,
-                      unselectedLabelColor: Colors.black,
+                      labelColor: AppTheme.white,
+                      unselectedLabelColor: AppTheme.white,
                       indicatorColor: Colors.transparent,
                       tabs: _categories
                           .map((category) => Tab(text: category))
