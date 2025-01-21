@@ -113,6 +113,20 @@ lib/
     ```
 
 
+## 🎥 Demo
+
+<div align="center">
+  <a href="https://drive.google.com/file/d/1pHh7kohurwACAnGXFo2BxgS4jfhC99Na/view?usp=drive_link" target="_blank">
+    <img src="https://img.shields.io/badge/WATCH%20DEMO-green?style=for-the-badge&logo=googledrive&logoColor=white" alt="Watch Demo" width="200"/>
+  </a>
+</div>
+
+###
+Click the button above to watch the complete app demonstration
+
+
+
+
 
 📚 Documentation
  ```bash
