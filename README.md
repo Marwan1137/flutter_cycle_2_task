@@ -71,9 +71,9 @@ lib/
 │   ├── network/           # HTTP client
 │   └── service_locator/   # Dependency injection
 ├── product/               # Product feature
-│   ├── data/              # Data models
-│   ├── presentation/      # UI components
-│   └── domain/            # Business logic
+│   ├── Model/              # Data models
+│   ├── View/      # UI components
+│   └── viewmode/            # Business logic
 └── main.dart              # App entry point
 
 ```
